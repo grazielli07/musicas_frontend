@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Fundo com gradiente escuro e moderno */
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background-attachment: fixed;
+    color: #e0e0e0;
+    padding: 30px 20px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.5em;
+    /* Texto com gradiente roxo/rosa */
+    background: linear-gradient(45deg, #b92b27, #1565C0);
+    background: linear-gradient(45deg, #8a2be2, #ff00ff);
+    
+    -webkit-text-fill-color: #e0e0e0;
+}
+
+h1::before {
+    content: "🎧 ";
+}
+
+.link-destaque {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+    transition: all 0.3s ease;
+}
+
+.link-destaque::before {
+    content: "➕ ";
+}
+
+.link-destaque:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(106, 17, 203, 0.7);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+#listaMusicas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Glassmorphism nos cards */
+.musica {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 6px solid #8a2be2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.musica:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+}
+
+.musica h2 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 1.5em;
+}
+
+.musica h2::before {
+    content: "🎵 ";
+}
+
+.artista {
+    font-weight: 600;
+    color: #b39ddb;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.artista::before {
+    content: "👤 ";
+}
+
+.detalhes {
+    font-size: 0.9em;
+    color: #9e9e9e;
+    margin-bottom: 20px;
+}
+
+.detalhes::before {
+    content: "💿 ";
+}
+
+.acoes {
+    display: flex;
+    gap: 15px;
+}
+
+.editar, .apagar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+    color: white;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.editar {
+    background: linear-gradient(45deg, #4b6cb7, #182848);
+    box-shadow: 0 4px 10px rgba(75, 108, 183, 0.3);
+}
+
+.editar::before {
+    content: "✏️ ";
+}
+
+.editar:hover {
+    background: linear-gradient(45deg, #182848, #4b6cb7);
+    transform: translateY(-2px);
+}
+
+.apagar {
+    background: linear-gradient(45deg, #cb2d3e, #ef473a);
+    box-shadow: 0 4px 10px rgba(203, 45, 62, 0.3);
+}
+
+.apagar::before {
+    content: "🗑️ ";
+}
+
+.apagar:hover {
+    background: linear-gradient(45deg, #ef473a, #cb2d3e);
+    transform: translateY(-2px);
+}

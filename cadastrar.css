@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background-attachment: fixed;
+    color: #e0e0e0;
+    padding: 30px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.link-voltar {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #b39ddb;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.link-voltar::before {
+    content: "🔙 ";
+}
+
+.link-voltar:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.2em;
+    background: linear-gradient(45deg, #8a2be2, #ff00ff);
+    
+    -webkit-text-fill-color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.container-campos {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #d1c4e9;
+    font-size: 1em;
+}
+
+label[for="titulo"]::before { content: "🏷️ "; }
+label[for="artista"]::before { content: "🎤 "; }
+label[for="genero"]::before { content: "🎸 "; }
+label[for="ano"]::before { content: "📅 "; }
+label[for="duracao"]::before { content: "⏱️ "; }
+
+input {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 12px;
+    font-size: 1em;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff00ff;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+}
+
+#botaoCadastrar {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+    transition: all 0.3s ease;
+}
+
+#botaoCadastrar::before {
+    content: "💾 ";
+}
+
+#botaoCadastrar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(106, 17, 203, 0.6);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
